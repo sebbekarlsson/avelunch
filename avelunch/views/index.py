@@ -13,6 +13,10 @@ def show(day):
     session = AvenySession()
 
     restaurants = session.get_restaurants()
+
+    if not restaurants:
+        return 'Failed to fetch restaurants', 500
+
     day = datetime.datetime.now().weekday() if not day else int(day)
     dayname = DAYS[day]
 
