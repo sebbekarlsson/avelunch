@@ -1,5 +1,5 @@
 # avelunch
-> Web application for all luch menus at avenyn
+> Web application for all lunch menus at avenyn
 
 <img src='avelunch.png' width='300px'/>
 
