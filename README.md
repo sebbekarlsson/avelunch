@@ -1,7 +1,7 @@
 # avelunch
 > Web application for all luch menus at avenyn
 
-<img src='avelunch.png' width='120px'/>
+<img src='avelunch.png' width='300px'/>
 
 ## Installing
 > To install:
