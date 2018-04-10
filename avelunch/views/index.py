@@ -18,6 +18,8 @@ def show(day):
         return 'Failed to fetch restaurants', 500
 
     day = datetime.datetime.now().weekday() if not day else int(day)
+    day = len(DAYS) - 1 if day < 0 else 0 if day > len(DAYS) - 1 else day
+
     dayname = DAYS[day]
 
     for restaurant in restaurants:
