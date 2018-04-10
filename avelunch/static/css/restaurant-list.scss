@@ -1,0 +1,64 @@
+@import 'mixins.scss';
+
+
+.restaurant-list {
+    width: 80%;
+    margin: auto;
+    @include font-default;
+
+    .restaurant-list-item {
+        @include display-flex;
+        flex-direction: column;
+        @include shadow-2;
+        box-sizing: border-box;
+        padding: 0.5rem;
+        margin-bottom: 1.5rem;
+        background-color: white;
+        color: black;
+
+        section:nth-child(1) {
+            height: 100px;
+            @include display-flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                height: 50px;
+            }
+        }
+
+        section:nth-child(2) {
+            flex: 1;
+
+            ul {
+                list-style: none;
+
+                li {
+                    font-weight: 200;
+                    border-bottom-style: solid;
+                    border-bottom-width: 1px;
+                    border-bottom-color: lightgray;
+                    min-height: 32px;
+                    line-height: 32px;
+                    display: block;
+                    padding-top: 0.5rem;
+                    padding-bottom: 0.5rem;
+                    overflow-wrap: break-word;
+                    word-wrap: break-word;
+
+                    -ms-word-break: break-all;
+                    /* This is the dangerous one in WebKit, as it breaks things wherever */
+                    word-break: break-all;
+                    /* Instead use this non-standard one: */
+                    word-break: break-word;
+
+                    /* Adds a hyphen where the word breaks, if supported (No Blink) */
+                    -ms-hyphens: auto;
+                    -moz-hyphens: auto;
+                    -webkit-hyphens: auto;
+                    hyphens: auto;
+                }
+            }
+        }
+    }
+}

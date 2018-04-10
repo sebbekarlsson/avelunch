@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+
+
+{% block body %}
+    <div class='app'>
+        <div class='view-restaurants'>
+            <div class='view-restaurants-head'>
+                <section><a href='/{{ day - 1 }}'><i class='material-icons'>keyboard_arrow_left</i></a></section>
+                <section>
+                    <h2>{{ dayname.title() }}</h2>
+                </section>
+                <section><a href='/{{ day + 1 }}'><i class='material-icons'>keyboard_arrow_right</i></a></section>
+            </div>
+            <div class='restaurant-list'>
+                {% for restaurant in restaurants %}
+                    <div class='restaurant-list-item'>
+                        <section>
+                            <img src='{{ restaurant.image }}'/>
+                        </section>
+                        <section>
+                            <ul>
+                                {% for food in restaurant.menu %}
+                                    <li>{{ food.decode('utf-8') }}</li>
+                                {% endfor %}
+                            </ul>
+                        </section>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
